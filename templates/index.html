@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/static/styles.css">
-        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="{{ url_for('static', filename='js/d3.v7.min.js') }}"></script>
         <title>Patient Demographics Datavis</title>
     </head>
 
@@ -41,6 +41,6 @@
         <footer>
             <p>By Mohab Abdalgadir</p>
         </footer>
-        <script src="{{ url_for('static', filename='script.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     </body>
 </html>
