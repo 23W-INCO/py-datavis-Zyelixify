@@ -14,9 +14,27 @@
         </header>
     
         <main>
-            <div>
+            <div class="chart">
                 <div id="chart"></div>
                 <p>This page provides an outline of active (alive) patients' demographics. It is intended for use by healthcare data analysts to gain insights into the patient population.</p>
+            </div>
+            <div>
+                <h2>Available API Endpoints</h2>
+                <p>These API endpoints provide access to the available patient records:</p>
+                <table>
+                    <tr>
+                        <th>Endpoint</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>/api/patients</td>
+                        <td>Get a list of all patients</td>
+                    </tr>
+                    <tr>
+                        <td>/api/patients/{id}</td>
+                        <td>Get details of a specific patient</td>
+                    </tr>
+                </table>
             </div>
         </main>
     

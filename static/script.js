@@ -1,5 +1,5 @@
  // Fetch the patient data
- d3.json("/patients").then(function(data) {
+ d3.json("/api/patients").then(function(data) {
     let ageGroups = [];
     data.forEach(function(patient) {
         if (!patient.deceasedDateTime) { // exclude diseased patients

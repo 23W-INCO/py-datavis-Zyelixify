@@ -8,7 +8,7 @@ app = Flask(__name__, static_url_path='/static')
 def index():
     return render_template('index.html') # for some reason couldn't link the js script, so had to turn it to a template
 
-@app.route('/patient/<id>', methods=['GET'])
+@app.route('/api/patients/<id>', methods=['GET'])
 def get_patient(id):
     try:
         # Load the patients data from the JSON file
@@ -27,7 +27,7 @@ def get_patient(id):
     except:
         return jsonify({"error": "There was an error when fetching data."}), 400
     
-@app.route('/patients', methods=['GET'])
+@app.route('/api/patients', methods=['GET'])
 def get_patients():
     try:
         # Load the patients data from the JSON file
