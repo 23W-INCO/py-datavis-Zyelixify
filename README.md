@@ -6,6 +6,7 @@ This application uses a Python backend with Flask to serve FHIR-compliant patien
 The data was then filtered to only include basic patient demographics data and not diving into their full medical history. As an example use-case, visualization of the patients' age groups and genders are shown in a diverging stacked-bar chart, which highlights the exact number of patients in each group/of which gender in a tooltip when hovering over the bars - with the ability to manipulate the chart by adding simple patient records into the dataset.
 
 ## Getting Started
+This project can be launched quickly and easily using GitHub Codespaces.
 
 ### Prerequisites
 - Python 3.8 or higher
