@@ -5,12 +5,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #D8DEE9;
+    color: #2E3440;
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #3B4252;
+    color: #ECEFF4;
     padding: 10px 0;
     text-align: center;
 }
@@ -41,13 +42,13 @@ main p {
 }
 
 table {
-    background-color: #f9f9f9;
+    background-color: #ECEFF4;
     width: 100%;
     border-collapse: collapse;
 }
 
 table, th, td {
-    border: 1px solid #333;
+    border: 1px solid #3B4252;
 }
 
 th, td {
@@ -56,8 +57,8 @@ th, td {
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #3B4252;
+    color: #ECEFF4;
     text-align: center;
     padding: 10px 0;
     width: 100%;
@@ -65,7 +66,7 @@ footer {
 }
 
 #add-patient-form {
-    background-color: #f9f9f9;
+    background-color: #ECEFF4;
     padding: 20px;
     margin: 20px 0;
     border-radius: 5px;
@@ -85,12 +86,12 @@ footer {
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #D8DEE9;
 }
 
 #add-patient-form input[type="submit"] {
-    background-color: #333;
-    color: white;
+    background-color: #3B4252;
+    color: #ECEFF4;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -99,7 +100,7 @@ footer {
 }
 
 #add-patient-form input[type="submit"]:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 #add-patient-form input[type="submit"]:active {
     transform: scale(1);
@@ -112,8 +113,8 @@ footer {
     height: auto;
     padding: 2px;
     font: 12px sans-serif;
-    background: lightsteelblue;
-    border: 0px;
+    background-color: #D8DEE9;
+    border: 1px solid #3B4252;
     border-radius: 8px;
     pointer-events: none;
 }

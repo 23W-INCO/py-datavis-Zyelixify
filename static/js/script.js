@@ -141,7 +141,7 @@ function generateChart() {
             .on("mouseover", function(event, d) { // Tooltip on hover
                 tooltip.transition()
                     .duration(200)
-                    .style("opacity", .9);
+                    .style("opacity", .99);
                 tooltip.html(`Age Group: ${d.ageGroup}<br/>Males: ${d.male}`)
                     .style("left", (event.pageX) + "px")
                     .style("top", (event.pageY - 28) + "px");
@@ -169,7 +169,7 @@ function generateChart() {
             .on("mouseover", function(event, d) { // Tooltip on hover
                 tooltip.transition()
                     .duration(200)
-                    .style("opacity", .9);
+                    .style("opacity", .99);
                 tooltip.html(`Age Group: ${d.ageGroup}<br/>Females: ${d.female}`)
                     .style("left", (event.pageX) + "px")
                     .style("top", (event.pageY - 28) + "px");
