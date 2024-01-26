@@ -1,4 +1,6 @@
 from flask import Flask, jsonify, render_template
+from flask import request
+from datetime import datetime
 from fhir.resources.patient import Patient
 import json
 
@@ -44,6 +46,46 @@ def get_patients():
         return jsonify([patient.dict() for patient in patient_objects]), 200
     except:
         return jsonify({"error": "There was an error when fetching data."}), 400
+    
+@app.route('/api/patients', methods=['POST'])
+def add_patient():
+    try:
+        # Get and validate the request data
+        data = request.get_json()
+        if 'id' not in data or 'gender' not in data or 'birthDate' not in data:
+            return jsonify({"error": "Missing required field"}), 400
+
+        # Create a new patient
+        birthDate = datetime.strptime(data['birthDate'], '%Y-%m-%d')
+        new_patient = {
+            'resourceType': 'Patient',
+            'id': data['id'],
+            'gender': data['gender'],
+            'birthDate': birthDate.strftime('%Y-%m-%d')
+        }
+
+        # Load and update the JSON database
+        with open('data/patients.json', 'r') as f:
+            patients = json.load(f)
+
+        # Check if patient with same id exists
+        for i, patient in enumerate(patients):
+            if patient['id'] == new_patient['id']:
+                # Update the existing patient
+                patients[i] = new_patient
+                break
+        else:
+            # Add the new patient
+            patients.append(new_patient)
+
+        with open('data/patients.json', 'w') as f:
+            json.dump(patients, f)
+
+        # Return the new patient as JSON
+        return jsonify(new_patient), 201
+    except:
+        return jsonify({"error": "There was an error when adding the patient."}), 400 # Error 400: Bad Request
+    
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -41,21 +41,18 @@ main p {
 }
 
 table {
+    background-color: #f9f9f9;
     width: 100%;
     border-collapse: collapse;
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid #333;
 }
 
 th, td {
     padding: 15px;
     text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
 }
 
 footer {
@@ -67,6 +64,46 @@ footer {
     bottom: 0;
 }
 
+#add-patient-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    width: 300px;
+}
+
+#add-patient-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#add-patient-form input[type="text"],
+#add-patient-form input[type="date"],
+#add-patient-form select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#add-patient-form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#add-patient-form input[type="submit"]:hover {
+    transform: scale(1.05);
+}
+#add-patient-form input[type="submit"]:active {
+    transform: scale(1);
+}
 
 .tooltip {
     position: absolute;

@@ -1,0 +1,6 @@
+{
+    "name": "py-datavis",
+    "image": "python:3.8-slim-buster",
+    "forwardPorts": [5000],
+    "postCreateCommand": "pip install -r requirements.txt && python app.py",
+}
